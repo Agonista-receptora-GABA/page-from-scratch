@@ -176,6 +176,10 @@
   a:focus-visible {
     color: var(--text-brand-light);
   }
+
+  img {
+    border-radius: var(--border-radius-3);
+  }
 }
 
 @layer layout {
@@ -218,5 +222,63 @@
     position: absolute;
     white-space: nowrap;
     width: 1px;
+  }
+
+  :root {
+    .text-center {
+      text-align: center;
+    }
+    .text-high-contrast {
+      color: var(--text-high-contrast);
+    }
+    .text-brand {
+      color: var(--text-brand);
+    }
+
+    .section-title {
+      font-size: var(--font-size-heading-regular);
+    }
+
+    .background-main {
+      background-color: var(--background-main);
+    }
+    .background-light {
+      background-color: var(--background-light);
+    }
+    .background-extra-light {
+      background-color: var(--background-extra-light);
+    }
+    .background-dark {
+      background-color: var(--background-dark);
+    }
+    .background-extra-dark {
+      background-color: var(--background-extra-dark);
+    }
+    .background-accent {
+      background-color: var(--background-accent-dark);
+    }
+
+    .font-size-sm {
+      font-size: var(--font-size-sm);
+    }
+    .font-size-regular {
+      font-size: var(--font-size-regular);
+    }
+    .font-size-md {
+      font-size: var(--font-size-md);
+    }
+    .font-size-lg {
+      font-size: var(--font-size-lg);
+    }
+
+    .border-radius-1 {
+      border-radius: var(--border-radius-1);
+    }
+    .border-radius-2 {
+      border-radius: var(--border-radius-2);
+    }
+    .border-radius-3 {
+      border-radius: var(--border-radius-3);
+    }
   }
 }
