@@ -179,6 +179,19 @@
 }
 
 @layer layout {
+  .section {
+    --padding-block: 3.75rem;
+
+    padding-block: var(--padding-block);
+
+    @media (width > 760px) {
+      --padding-block: 8rem;
+
+      &[data-padding="compact"] {
+        --padding-block: 4.5rem;
+      }
+    }
+  }
   .wrapper {
     --wrapper-max-width: 1130px;
 
