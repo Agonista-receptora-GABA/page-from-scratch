@@ -265,6 +265,26 @@
       text-decoration: none;
     }
   }
+  .site-footer {
+    display: grid;
+    gap: 2rem;
+    text-align: center;
+    padding-block: 2rem;
+    background-color: var(--background-dark);
+
+    a {
+      color: var(--text-high-contrast);
+    }
+    a:hover,
+    a:focus-visible {
+      color: var(--text-brand-light);
+    }
+  }
+  .site-footer__title {
+    font-size: var(--font-size-md);
+    font-family: var(--ff-heading);
+    font-weight: 700;
+  }
 
   .hero {
     text-align: center;
