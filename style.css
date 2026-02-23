@@ -213,6 +213,32 @@
   }
 }
 
+@layer components {
+  .site-header {
+    padding-block: 1rem;
+  }
+  .site-header__inner {
+    display: flex;
+    gap: 0.5rem 1rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .primary-navigation {
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
 @layer utilities {
   .visually-hidden {
     clip: rect(0 0 0 0);
