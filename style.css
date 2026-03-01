@@ -192,6 +192,17 @@
     gap: var(--grid-flow-gap, 1rem);
   }
 
+  .grid-auto-fit {
+    --auto-fit-min-col-size: 250px;
+
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(min(var(--auto-fit-min-col-size), 100%), 1fr)
+    );
+  }
+
   .equal-columns {
     display: grid;
     gap: var(--equal-columns-gap, 1rem);
@@ -368,8 +379,15 @@
     }
   }
 
+  .mushroom-guide {
+    --card-title-font-size: var(--font-size-lg);
+    --card-title-color: var(--text-high-contrast);
+    --card-gap: 0.75rem;
+  }
+
   .card {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     gap: var(--card-gap, 1rem);
     padding: 1rem;
     background-color: var(--background-light);
@@ -382,6 +400,43 @@
   .card__title {
     font-size: var(--card-title-font-size, var(--font-size-heading-sm));
     color: var(--card-title-color, var(--text-brand));
+  }
+  .card__note {
+    margin-block-start: auto;
+    background-color: var(--background-extra-light);
+    padding: 0.75rem;
+    border-radius: var(--border-radius-2);
+  }
+
+  .tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+
+    li {
+      font-family: var(--ff-heading);
+      font-size: var(--font-size-sm);
+      color: var(--text-high-contrast);
+      padding: 0.125rem 0.25rem;
+      border-radius: var(--border-radius-1);
+      background-color: var(--tag-bg, red);
+    }
+
+    [data-edible="edible"] {
+      --tag-bg: var(--background-accent-main);
+    }
+    [data-edible="toxic"] {
+      --tag-bg: var(--clr-red-500);
+    }
+    [data-season="summer"] {
+      --tag-bg: var(--background-accent-main);
+    }
+    [data-season="spring"] {
+      --tag-bg: var(--clr-teal-500);
+    }
+    [data-season="fall"] {
+      --tag-bg: var(--clr-orange-500);
+    }
   }
 
   .button {
