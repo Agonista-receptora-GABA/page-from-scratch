@@ -441,6 +441,10 @@
     background-image: url(/assets/hero.webp);
     background-size: cover;
     background-position: center;
+
+    animation: fade-out forwards;
+    animation-timeline: view();
+    animation-range-start: exit;
   }
   .hero__title {
     font-size: var(--font-size-heading-lg);
@@ -681,5 +685,14 @@
     .border-radius-3 {
       border-radius: var(--border-radius-3);
     }
+  }
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
   }
 }
