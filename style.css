@@ -620,6 +620,11 @@
     width: 1px;
   }
 
+  .resizing * {
+    transition: none;
+    animation: none;
+  }
+
   :root {
     .text-center {
       text-align: center;
